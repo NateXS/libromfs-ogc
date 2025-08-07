@@ -40,18 +40,18 @@ macro(romfs_add target romfs_dir)
 	# link the tar object static library to the final target
 
 
-	# find the libromfs-wiiu library and headers
+	# find the libromfs-wii library and headers
 	find_path(
 		ROMFS_INCLUDE_DIR
-		romfs-wiiu.h
+		romfs-wii.h
 	)
 
 	find_library(
 		ROMFS_LIBRARY
-		romfs-wiiu
+		romfs-wii
 	)
 
-	# add the libromfs-wiiu library and headers to the final target
+	# add the libromfs-wii library and headers to the final target
 	target_include_directories(
 		${target}
 		PUBLIC

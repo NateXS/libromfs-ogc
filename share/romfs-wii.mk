@@ -5,7 +5,7 @@ endif
 ifneq ($(strip $(ROMFS)),)
 	TOPDIR ?= .
 	ROMFS_LIBS := -lromfs-wii
-	ROMFS_CFLAGS := -I$(DEVKITPRO)/portlibs/ppc/include
+	ROMFS_CFLAGS := -I$(DEVKITPRO)/portlibs/wii/include
 	ROMFS_TARGET := app.romfs.o
 
 %.romfs.o: $(TOPDIR)/$(ROMFS)

@@ -24,7 +24,7 @@ TARGET		:=	libromfs-wii
 BUILD		:=	build
 SOURCES		:=	source
 INCLUDES	:=	include
-INSTALL		:=	$(DEVKITPRO)/portlibs/ppc
+INSTALL		:=	$(DEVKITPRO)/portlibs/wii
 
 #-------------------------------------------------------------------------------
 # options for code generation
