@@ -107,7 +107,7 @@ else
 #-------------------------------------------------------------------------------
 # romfs
 #-------------------------------------------------------------------------------
-include $(PORTLIBS_PATH)/wiiu/share/romfs-wiiu.mk
+include $(PORTLIBS_PATH)/wiiu/share/romfs-wii.mk
 CFLAGS		+=	$(ROMFS_CFLAGS)
 CXXFLAGS	+=	$(ROMFS_CFLAGS)
 LIBS		+=	$(ROMFS_LIBS)

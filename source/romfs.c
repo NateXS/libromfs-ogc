@@ -15,7 +15,6 @@
 #include <sys/param.h>
 #include <stdint.h>
 #include <unistd.h>
-#include <coreinit/memory.h>
 
 
 /* include the implementation files (needed for static functions) */

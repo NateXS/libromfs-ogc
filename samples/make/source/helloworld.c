@@ -3,7 +3,7 @@
 #include <whb/proc.h>
 #include <whb/log.h>
 #include <whb/log_console.h>
-#include <romfs-wiiu.h>
+#include <romfs-wii.h>
 #include <stdio.h>
 #include <stdlib.h>
 

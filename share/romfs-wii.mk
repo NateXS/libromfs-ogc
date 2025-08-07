@@ -3,12 +3,10 @@ ifneq ($(strip $(V)), 1)
 endif
 
 ifneq ($(strip $(ROMFS)),)
-
-TOPDIR		?=	.
-
-ROMFS_LIBS	:=	-lromfs-wiiu
-ROMFS_CFLAGS	:=	-I$(DEVKITPRO)/portlibs/wiiu/include
-ROMFS_TARGET	:=	app.romfs.o
+	TOPDIR ?= .
+	ROMFS_LIBS := -lromfs-wii
+	ROMFS_CFLAGS := -I$(DEVKITPRO)/portlibs/ppc/include
+	ROMFS_TARGET := app.romfs.o
 
 %.romfs.o: $(TOPDIR)/$(ROMFS)
 	@echo ROMFS $(notdir $@)
@@ -17,9 +15,7 @@ ROMFS_TARGET	:=	app.romfs.o
 	@rm -f romfs.tar
 
 else
-
-ROMFS_LIBS	:=
-ROMFS_CFLAGS	:=
-ROMFS_TARGET	:=
-
+	ROMFS_LIBS :=
+	ROMFS_CFLAGS :=
+	ROMFS_TARGET :=
 endif

@@ -2,11 +2,11 @@
 .SUFFIXES:
 #-------------------------------------------------------------------------------
 
-ifeq ($(strip $(DEVKITPRO)),)
-$(error "Please set DEVKITPRO in your environment. export DEVKITPRO=<path to>/devkitpro")
+ifeq ($(strip $(DEVKITPPC)),)
+$(error "Please set DEVKITPPC in your environment. export DEVKITPPC=<path to>/devkitPPC")
 endif
-TOPDIR ?= $(CURDIR)
-include $(DEVKITPRO)/wut/share/wut_rules
+
+include $(DEVKITPPC)/wii_rules
 
 #-------------------------------------------------------------------------------
 # library version
@@ -20,11 +20,11 @@ VERSION		:=	0.7
 # INCLUDES is a list of directories containing header files
 # INSTALL is the directory where the library will be installed
 #-------------------------------------------------------------------------------
-TARGET		:=	libromfs-wiiu
+TARGET		:=	libromfs-wii
 BUILD		:=	build
 SOURCES		:=	source
 INCLUDES	:=	include
-INSTALL		:=	$(PORTLIBS_PATH)/wiiu
+INSTALL		:=	$(DEVKITPRO)/portlibs/ppc
 
 #-------------------------------------------------------------------------------
 # options for code generation
@@ -32,7 +32,7 @@ INSTALL		:=	$(PORTLIBS_PATH)/wiiu
 CFLAGS		:=	-Wall -O2 -ffunction-sections \
 			$(MACHDEP)
 
-CFLAGS		+=	$(INCLUDE) -D__WIIU__ -D__WUT__
+CFLAGS		+=	$(INCLUDE) -DGEKKO
 
 CXXFLAGS	:=	$(CFLAGS)
 
@@ -42,7 +42,7 @@ ASFLAGS		:=	$(MACHDEP)
 # list of directories containing libraries, this must be the top level
 # containing include and lib
 #-------------------------------------------------------------------------------
-LIBDIRS		:=	$(PORTLIBS) $(WUT_ROOT)
+LIBDIRS		:=	$(LIBOGC_LIB)
 
 #-------------------------------------------------------------------------------
 # no real need to edit anything past this point unless you need to add additional
@@ -127,4 +127,4 @@ $(OUTPUT).a	:	$(OFILES)
 
 #-------------------------------------------------------------------------------
 endif
-#------------------------------------------------------------------------------- 
+#-------------------------------------------------------------------------------
