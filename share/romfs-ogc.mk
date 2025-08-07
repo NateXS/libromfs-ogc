@@ -4,8 +4,15 @@ endif
 
 ifneq ($(strip $(ROMFS)),)
 	TOPDIR ?= .
-	ROMFS_LIBS := -lromfs-wii
+	ROMFS_LIBS := -lromfs-ogc
+
+ # Set include path based on platform
+	ifeq ($(PLATFORM),gamecube)
+	ROMFS_CFLAGS := -I$(DEVKITPRO)/portlibs/gamecube/include
+	else
 	ROMFS_CFLAGS := -I$(DEVKITPRO)/portlibs/wii/include
+	endif
+
 	ROMFS_TARGET := app.romfs.o
 
 %.romfs.o: $(TOPDIR)/$(ROMFS)

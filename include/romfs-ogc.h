@@ -1,5 +1,5 @@
-#ifndef _ROMFS_WII_H
-#define _ROMFS_WII_H
+#ifndef _ROMFS_OGC_H
+#define _ROMFS_OGC_H
 
 #ifdef __cplusplus
 extern "C" {

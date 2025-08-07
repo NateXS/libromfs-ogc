@@ -1,16 +1,25 @@
-## libromfs-wii
+## libromfs-ogc
 
 
-libromfs-wii is a port of [lib-romfs-wiiu](https://github.com/yawut/libromfs-wiiu) to the Wii.
+libromfs-ogc is a port of [libromfs-wiiu](https://github.com/yawut/libromfs-wiiu) to the Wii and Gamecube.
 
 ### Installing
 
 To install the library:
 
-    $ git clone https://github.com/NateXS/libromfs-wii.git
-    $ cd libromfs-wii
-    $ make
-    $ sudo make install
+**Wii**
+
+    $ git clone https://github.com/NateXS/libromfs-ogc.git
+    $ cd libromfs-ogc
+    $ make PLATFORM=wii
+    $ sudo make PLATFORM=wii install
+
+**Gamecube**
+
+    $ git clone https://github.com/NateXS/libromfs-ogc.git
+    $ cd libromfs-ogc
+    $ make PLATFORM=gamecube
+    $ sudo make PLATFORM=gamecube install
 
 
 

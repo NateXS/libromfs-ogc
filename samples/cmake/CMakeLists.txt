@@ -3,7 +3,7 @@ set(CMAKE_TOOLCHAIN_FILE "$ENV{DEVKITPRO}/wut/share/wut.toolchain.cmake")
 
 project(romfs-helloworld C)
 include("${DEVKITPRO}/wut/share/wut.cmake" REQUIRED)
-include("${DEVKITPRO}/portlibs/wiiu/share/romfs-wiiu.cmake" REQUIRED)
+include("${DEVKITPRO}/portlibs/wii/share/romfs-ogc.cmake" REQUIRED)
 
 # add source files
 add_executable(romfs-helloworld
