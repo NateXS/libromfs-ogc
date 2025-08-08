@@ -12,14 +12,11 @@ To install the library:
     $ git clone https://github.com/NateXS/libromfs-ogc.git
     $ cd libromfs-ogc
     $ make PLATFORM=wii
-    $ sudo make PLATFORM=wii install
+    $ (sudo -E) make PLATFORM=wii install
 
 **Gamecube**
 
     $ git clone https://github.com/NateXS/libromfs-ogc.git
     $ cd libromfs-ogc
     $ make PLATFORM=gamecube
-    $ sudo make PLATFORM=gamecube install
-
-
-
+    $ (sudo -E) make PLATFORM=gamecube install
